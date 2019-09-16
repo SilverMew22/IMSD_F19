@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallBuilderBehavior : MonoBehaviour
+public class wallBuilderNew : MonoBehaviour
 {
     public GameObject SteveTheCube;
- 
     
+
 
     void Start()
     {
@@ -33,9 +33,11 @@ public class WallBuilderBehavior : MonoBehaviour
         BuildAWallAtY(0);
         BuildAWallAtY2(0);
 
+        
 
     }
-   
+    
+    
 
     void BuildAWallAtZ(float z)//left and right wall
     {
@@ -77,5 +79,5 @@ public class WallBuilderBehavior : MonoBehaviour
             }
         }
     }
-
+    
 }
