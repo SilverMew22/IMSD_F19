@@ -40,7 +40,7 @@ public class Land_Builder : MonoBehaviour
     }
 
 
-    /*void BuildAWallAtZ(float z)//left and right wall
+    void BuildAWallAtZ(float z)//left and right wall
     {
         for (int xPos = 0; xPos < 10; xPos++)
         {
@@ -69,14 +69,14 @@ public class Land_Builder : MonoBehaviour
                 Instantiate(SteveTheCube, new Vector3(xPos - 10, 4, zPos), Quaternion.identity);
             }
         }
-    }*/
+    }
     void BuildAWallAtY2(float y)//make a wall at the bottom
     {
-        for (int xPos = 0; xPos < 4; xPos++)
+        for (int xPos = 0; xPos < 3; xPos++)
         {
-            for (int zPos = 0; zPos < 4; zPos++)
+            for (int zPos = 0; zPos < 3; zPos++)
             {
-                Instantiate(SteveTheCube, new Vector3(xPos *2, 0, zPos*2), Quaternion.identity);
+                Instantiate(SteveTheCube, new Vector3(xPos *3, xPos * 3, zPos*3), Quaternion.identity);
             }
         }
     }
