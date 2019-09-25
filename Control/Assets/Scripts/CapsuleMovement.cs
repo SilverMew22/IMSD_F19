@@ -17,7 +17,7 @@ public class CapsuleMovement : MonoBehaviour
     // Update is called once per frame
     void CapsuleZoomDownScreen()
     {
-        transform.position = new Vector3(2 * Mathf.Tan(Time.time), 0, 2 * Mathf.Tan(Time.time));
+        transform.position = new Vector3(2 * Mathf.Tan(Time.time), 5, 2 * Mathf.Tan(Time.time));
         
     }
 }

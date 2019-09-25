@@ -72,9 +72,9 @@ public class Land_Builder : MonoBehaviour
     }
     void BuildAWallAtY2(float y)//make a wall at the bottom
     {
-        for (int xPos = 0; xPos < 3; xPos++)
+        for (int xPos = 0; xPos < 1; xPos++)
         {
-            for (int zPos = 0; zPos < 3; zPos++)
+            for (int zPos = 0; zPos < 1; zPos++)
             {
                 Instantiate(SteveTheCube, new Vector3(xPos *3, xPos * 3, zPos*3), Quaternion.identity);
             }
