@@ -10,11 +10,14 @@ public class Eat_Food : MonoBehaviour
     int Prey_Eaten;
     public int eatThresh = 3;
     private Renderer rend;
+    AudioSource aud;
+    public AudioClip moveClip;
     // Start is called before the first frame update
     void Start()
     {
         myRb = GetComponent<Rigidbody>();
         rend = GetComponent<Renderer>();
+        aud = GetComponent<AudioSource>();
 
     }
 
@@ -35,6 +38,7 @@ public class Eat_Food : MonoBehaviour
             {
                 Destroy(gameObject);
                 rend.material.color = Color.red;
+                aud.PlayOneShot(moveClip);
             }
         }
     }

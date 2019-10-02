@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class player_movement : MonoBehaviour {
     public float mSpeed;
-	// Use this for initialization
-	void Start () {
+    
+    // Use this for initialization
+    void Start () {
         mSpeed = 7f;
-	}
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -23,5 +25,6 @@ public class player_movement : MonoBehaviour {
         {
             transform.position += new Vector3(0, -1 * Time.deltaTime * mSpeed, 0);
         }
+        
     }
 }
