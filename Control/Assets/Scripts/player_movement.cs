@@ -16,12 +16,12 @@ public class player_movement : MonoBehaviour {
         transform.Translate(mSpeed * Input.GetAxis
             ("Horizontal") * Time.deltaTime, 0f, mSpeed * 
             Input.GetAxis ("Vertical") * Time.deltaTime);
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.M))
         {
             transform.position += new Vector3(0, 1 * Time.deltaTime * mSpeed, 0);
 
         }
-        if (Input.GetKey(KeyCode.M))
+        if (Input.GetKey(KeyCode.Space))
         {
             transform.position += new Vector3(0, -1 * Time.deltaTime * mSpeed, 0);
         }

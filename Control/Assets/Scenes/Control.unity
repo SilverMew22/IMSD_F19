@@ -3747,6 +3747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   multiplier: 10
   eatThresh: 3
+  moveClip: {fileID: 8300000, guid: f545ba6177a1d4b248ac74fe30de5714, type: 3}
 --- !u!135 &848609204
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8068,6 +8069,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4506272208042482756, guid: 08eaa52e95df3874c8e79161016bbcfe,
+        type: 3}
+      propertyPath: pred
+      value: 
+      objectReference: {fileID: 848609207}
+    - target: {fileID: 4506272208042482760, guid: 08eaa52e95df3874c8e79161016bbcfe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4506272208042482760, guid: 08eaa52e95df3874c8e79161016bbcfe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177755034566113391, guid: 08eaa52e95df3874c8e79161016bbcfe,
+        type: 3}
+      propertyPath: pred
+      value: 
+      objectReference: {fileID: 848609207}
+    - target: {fileID: 4177755034566113379, guid: 08eaa52e95df3874c8e79161016bbcfe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: SteveTheCube
       value: 
@@ -8136,6 +8162,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Prey
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896549014442192418, guid: 08eaa52e95df3874c8e79161016bbcfe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1896549014442192430, guid: 08eaa52e95df3874c8e79161016bbcfe,
         type: 3}
