@@ -1,24 +1,25 @@
-﻿using System.Collections;
+﻿
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Bad_Cube_move : MonoBehaviour
 {
-    Vector3 startPosition;
+
+    Vector3 positionOffset;
+
+    // Start is called before the first frame update
     void Start()
     {
-        startPosition = transform.position;
+        positionOffset = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float x = 2 * Mathf.Cos(Time.timeSinceLevelLoad) + startPosition.y;
-        float y = 2 * Mathf.Cos(Time.timeSinceLevelLoad) + startPosition.y;
-        //float z = startPosition.z;
-        float z = 2 * Mathf.Cos(Time.timeSinceLevelLoad) + startPosition.y;
-        transform.position = new Vector3(x, y, z);
+        transform.position = new Vector3(0,
+            Mathf.Cos(Time.time) * 5,0)+ positionOffset;
     }
 }
-
-
