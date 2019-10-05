@@ -15,6 +15,7 @@ public class CollectBalls : MonoBehaviour
         {
             collectSound.Play();
             Destroy(gameObject);
+
         }
     }
 
