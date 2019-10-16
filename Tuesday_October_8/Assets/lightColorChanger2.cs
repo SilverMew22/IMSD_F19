@@ -12,7 +12,6 @@ public class lightColorChanger2 : MonoBehaviour
     void Start()
     {
         colorChange.color = new Color(1, .5f, 0);
-        colorChange.color = new Color(1, .5f, 0);
         timer += Time.deltaTime;
 
 
