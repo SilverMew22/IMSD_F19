@@ -5,7 +5,7 @@ using UnityEngine;
 public class ReferToOtherStuff : MonoBehaviour
 {
     public GameObject putAgameObjectHere;
-    public GameObject OtherStuff;
+    //public GameObject OtherStuff;
     public bool stuff;
     private Vector3 offset;
     public float startTimer;
@@ -28,7 +28,7 @@ public class ReferToOtherStuff : MonoBehaviour
 
         if (startTimer >= 3) timer += Time.deltaTime;
 
-        if (OtherStuff) putAgameObjectHere.transform.position = new Vector3(Mathf.Sin(timer), 0, 0) + offset;
+        if (stuff) putAgameObjectHere.transform.position = new Vector3(Mathf.Sin(timer), 0, 0) + offset;
         else putAgameObjectHere.transform.position = new Vector3(0, Mathf.Sin(timer), 0) + offset;
         
     }
