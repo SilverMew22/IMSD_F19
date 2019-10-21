@@ -18,6 +18,8 @@ public class ReferToOtherStuff : MonoBehaviour
     public Rigidbody myRb_2;
     public float multiplier = 10f;
     public Light colorChange;
+    public Renderer rend;
+ 
    
 
     // Start is called before the first frame update
@@ -27,6 +29,7 @@ public class ReferToOtherStuff : MonoBehaviour
         timer += Time.deltaTime;
         colorChange.color = new Color(1, .5f, 0);
         //ScaleMode = putAgameObjectHere.transform.localScale;
+        rend = GetComponent<Renderer>();
 
 
     }
@@ -48,7 +51,8 @@ public class ReferToOtherStuff : MonoBehaviour
             Sound_2.Stop();
             Sound_3.Stop();
             Sound_4.Stop();
-            colorChange.color = new Color(0, 50, 0);
+            colorChange.color = new Color(0, 50, 10);
+            rend.material.color = Color.red;
         }
         if (Input.GetKey(KeyCode.S))
         {
@@ -57,7 +61,8 @@ public class ReferToOtherStuff : MonoBehaviour
             Sound_1.Stop();
             Sound_3.Stop();
             Sound_4.Stop();
-            colorChange.color = new Color(0, 40, 0);
+            colorChange.color = new Color(0, 40, 10);
+            rend.material.color = Color.yellow;
         }
         if (Input.GetKey(KeyCode.D))
         {
@@ -66,7 +71,8 @@ public class ReferToOtherStuff : MonoBehaviour
             Sound_1.Stop();
             Sound_2.Stop();
             Sound_4.Stop();
-            colorChange.color = new Color(0, 0, 50);
+            colorChange.color = new Color(0, 10, 50);
+            rend.material.color = Color.yellow;
         }
         if (Input.GetKey(KeyCode.A))
         {
@@ -75,7 +81,8 @@ public class ReferToOtherStuff : MonoBehaviour
             Sound_1.Stop();
             Sound_2.Stop();
             Sound_3.Stop();
-            colorChange.color = new Color(0, 0, 40);
+            colorChange.color = new Color(0, 10, 40);
+            rend.material.color = Color.red;
         }
 
     }
