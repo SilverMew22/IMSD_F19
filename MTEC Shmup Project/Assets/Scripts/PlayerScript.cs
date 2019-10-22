@@ -128,7 +128,7 @@ public class PlayerScript : MonoBehaviour{
         rb.MovePosition((Vector2)transform.position + velocity);
     }
 
-void MovePlayer() {
+    void MovePlayer() {
 
         //here were setting the X and Y values of our custom Velocity Vector2. 
         //We are getting the present Unity Axis values for horizontal (x) and vertical (y). A positive X value means its moving right, a negative X means it's moving to the left. 
