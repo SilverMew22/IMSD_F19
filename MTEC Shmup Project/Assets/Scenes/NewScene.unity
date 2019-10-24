@@ -952,7 +952,7 @@ MonoBehaviour:
   enemyFireDelay: 1
   maxEnemyBulletsOnScreen: 10
   cameraShakePower: 0
-  enableUI: 0
+  enableUI: 1
   healthBarGradient:
     serializedVersion: 2
     key0: {r: 1, g: 1, b: 1, a: 1}
