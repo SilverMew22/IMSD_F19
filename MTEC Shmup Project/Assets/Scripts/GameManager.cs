@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour{
+    
 
     //This is used to make GameManager a singleton to have it be easily accessible from all other scripts
     //This is doable because I know in advance there should only ever be a single GameManager in the scene
@@ -177,7 +178,9 @@ public class GameManager : MonoBehaviour{
     // Here we spawn an enemy in a random position along the Y axis
     // We then access all the variables of the enemy, setting them to the values we specificed in the Inspector.  
     void SpawnEnemy() {
-        Vector2 pos = new Vector2(xPos, Random.Range(-3.5f, 3.4f));
+       // Vector2 pos = new Vector2(xPos, Random.Range(-3.5f, 3.4f));
+        Vector2 pos = new Vector2(Random.Range(-3.5f, 3.4f),xPos);
+        //GameObject enemy = Instantiate(enemyPrefab, pos, enemyPrefab.transform.localRotation);
         GameObject enemy = Instantiate(enemyPrefab, pos, enemyPrefab.transform.localRotation);
 
         var es = enemy.GetComponent<EnemyScript>();

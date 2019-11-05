@@ -22,11 +22,12 @@ public class BulletScript : MonoBehaviour{
         // Here we check if a bullet is an enemy bullet or a player bullet. 
         //If it is an enemy bullet have it move to the left, if it is a player bullet, to the right.
         if (enemyBullet) {
-            rb.velocity = (Vector2.left * speed * Time.deltaTime);
+            //rb.velocity = (Vector2.left * speed * Time.deltaTime);
+            rb.velocity = (Vector2.down * speed * Time.deltaTime);
 
-        } else {
-            rb.velocity = (Vector2.right * speed * Time.deltaTime);
-        }
+        } //else {
+            //rb.velocity = (Vector2.up * speed * Time.deltaTime);
+        //}
     }
 
     //OnTriggerEnter2D is a Unity method for detecting collisions with Triggers. In this case the bullet box collider is set to a trigger.

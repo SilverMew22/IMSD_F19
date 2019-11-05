@@ -141,8 +141,8 @@ public class EnemyScript : MonoBehaviour {
     void Attacking() {
         // This casts a ray from the enemy ship to see if the player is in front of it,
         // If it detects the player, it fires a bullet, assuming it is ready to fire.
-        RaycastHit2D playerCheck = Physics2D.Raycast(transform.position, Vector2.left, 15f, LayerMask.GetMask("Player"));
-
+        //RaycastHit2D playerCheck = Physics2D.Raycast(transform.position, Vector2.left, 15f, LayerMask.GetMask("Player"));
+        RaycastHit2D playerCheck = Physics2D.Raycast(transform.position, Vector2.down, 15f, LayerMask.GetMask("Player"));
         if (playerCheck) {
             playerFound = true;
         } else {
@@ -170,7 +170,7 @@ public class EnemyScript : MonoBehaviour {
         // This casts a circle ray from the enemy ship to see if a bullet is approaching it. A circle ray has a radius you can adjust to make the detection area larger
         // If it detects a bullet, it tries to move to a random nearby location along the Y axis
 
-        RaycastHit2D bulletCheck = Physics2D.CircleCast(transform.position, bulletDetectionRad / 10, Vector2.left, bulletDetectionDist * 10, LayerMask.GetMask("PlayerBullet"));
+        RaycastHit2D bulletCheck = Physics2D.CircleCast(transform.position, bulletDetectionRad / 10, Vector2.down, bulletDetectionDist * 10, LayerMask.GetMask("PlayerBullet"));
 
         var ranPos = Vector2.zero;
 
@@ -186,7 +186,7 @@ public class EnemyScript : MonoBehaviour {
         }
 
         if (!bulletFound) {
-            rb.velocity = (Vector2.left + defVelocity)  * speedMultiplier;
+            rb.velocity = (Vector2.down + defVelocity)  * speedMultiplier;
         } else {
             Vector2 newPos = new Vector2(defVelocity.x, ranPos.y);
             rb.velocity += newPos;
