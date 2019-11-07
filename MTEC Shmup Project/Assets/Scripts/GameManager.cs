@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour{
 
     ParticleSystem stars;
 
-    float xPos = 9.5f;
+    float xPos = 9.5f;    
     float t;
 
     bool gameOver;

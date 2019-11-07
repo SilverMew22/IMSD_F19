@@ -25,9 +25,9 @@ public class BulletScript : MonoBehaviour{
             //rb.velocity = (Vector2.left * speed * Time.deltaTime);
             rb.velocity = (Vector2.down * speed * Time.deltaTime);
 
-        } //else {
-            //rb.velocity = (Vector2.up * speed * Time.deltaTime);
-        //}
+        } else {
+            rb.velocity = (Vector2.up * speed * Time.deltaTime);
+        }
     }
 
     //OnTriggerEnter2D is a Unity method for detecting collisions with Triggers. In this case the bullet box collider is set to a trigger.

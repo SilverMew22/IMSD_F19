@@ -143,6 +143,7 @@ public class EnemyScript : MonoBehaviour {
         // If it detects the player, it fires a bullet, assuming it is ready to fire.
         //RaycastHit2D playerCheck = Physics2D.Raycast(transform.position, Vector2.left, 15f, LayerMask.GetMask("Player"));
         RaycastHit2D playerCheck = Physics2D.Raycast(transform.position, Vector2.down, 15f, LayerMask.GetMask("Player"));
+       
         if (playerCheck) {
             playerFound = true;
         } else {
@@ -172,10 +173,12 @@ public class EnemyScript : MonoBehaviour {
 
         RaycastHit2D bulletCheck = Physics2D.CircleCast(transform.position, bulletDetectionRad / 10, Vector2.down, bulletDetectionDist * 10, LayerMask.GetMask("PlayerBullet"));
 
+
         var ranPos = Vector2.zero;
 
         // By default, the enemy moves in a sin wave pattern towards the left side of the screen
-        var defVelocity = Vector2.up * Mathf.Sin(Time.time * moveWaveFreq) * moveWaveAmp;
+        //var defVelocity = Vector2.up * Mathf.Sin(Time.time * moveWaveFreq) * moveWaveAmp;
+        var defVelocity = Vector2.left * Mathf.Sin(Time.time * moveWaveFreq) * moveWaveAmp;
 
 
         if (bulletCheck) {
